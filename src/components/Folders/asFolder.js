@@ -13,6 +13,7 @@ function mapDispatchToProps(dispatch) {
 }
 
 //TODO: почему то не работает handleSelected который ставит значение по умолчанию в папке
+// Дело все в useEffect в Container2
 const asFolder = compose(
     withHandlers({
         onHandleSelected: ({folderName, handleSelected}) => () => {
