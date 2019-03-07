@@ -2,8 +2,9 @@ import { combineReducers } from 'redux';
 
 import mainReducer from './mainReducer';
 import uiReducer from './uiReducer';
+import todoReducer from './todoReducer';
 
-const appReducer = combineReducers({ mainReducer, ui: uiReducer });
+const appReducer = combineReducers({ mainReducer, ui: uiReducer, todo: todoReducer });
 
 const rootReducer = (state, action) => {
 

@@ -15,12 +15,12 @@ function mapDispatchToProps(dispatch) {
 //TODO: почему то не работает handleSelected который ставит значение по умолчанию в папке
 // Дело все в useEffect в Container2
 const asFolder = compose(
+    connect(null, mapDispatchToProps),// порядок пердачи функции connect ВАЖЕН!!!
     withHandlers({
         onHandleSelected: ({folderName, handleSelected}) => () => {
             handleSelected(folderName);
         },
     }),
-    connect(null, mapDispatchToProps)
 )
 
 export default asFolder;

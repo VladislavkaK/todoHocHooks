@@ -9,7 +9,7 @@ const List = ({folders, currentFolder}) => {
             <ul className="list-group">
                 {folders.map((name, index) => {
                     let selected = false;
-                    console.log(currentFolder)
+                    
                     if (name === currentFolder) {
                         selected = true;
                     }

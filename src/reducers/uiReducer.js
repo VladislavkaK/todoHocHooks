@@ -16,6 +16,7 @@ function uiReducer(state = initialState, action = {}) {
 }
 
 function SET_CURRENT_FOLDER_FUNC(state, action) {
+    // console.log(action.payload.folderName)
     return {...state, currentFolder: action.payload.folderName};
 }
 

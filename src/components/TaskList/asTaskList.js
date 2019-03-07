@@ -1,14 +1,29 @@
-// import {compose, withReducer} from 'recompose';
-// import {connect} from 'react-redux';
+import {compose, withReducer} from 'recompose';
+import {connect} from 'react-redux';
 
-// function mapStateToProps(state) {
-//     return {
-//         'state': state,
-//     };
-// }
+// Селектор, возвращает название задачи
+function getFolder(state, currentFolder) {
+    let newTasks = state.todo.tasks;
+    let { tasks } = state.mainReducer;
+    let allTasks = Object.assign(newTasks, tasks);
+  
+    let folder = allTasks.filter((name, index) => {
+        return name.folder === currentFolder;
+    })
+    
+    return folder;
+}
 
-// const asContainer = compose(
-//     connect(mapStateToProps, null)
-// )
+function mapStateToProps(state) {
+    
+    return {
+        'tasks': state.mainReducer.tasks,
+        'currentTask': getFolder(state, state.ui.currentFolder)
+    };
+}
 
-// export default asContainer;
+const asTaskList = compose(
+    connect(mapStateToProps, null)
+)
+
+export default asTaskList;

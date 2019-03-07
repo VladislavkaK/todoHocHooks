@@ -5,10 +5,8 @@ import { TaskArea } from '../../components';
 const Container2 = (props) => {
 
     useEffect(() => {
-        return () => {
-            props.init();
-        }
-    });
+        props.init();
+    },[]);//передаем пустой массив в качестве второго аргумента, чтобы выполнился один раз вызов функции init() для получения данных
 
     return (
         <div className="row Container">

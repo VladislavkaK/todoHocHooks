@@ -7,15 +7,16 @@ let reduxMiddlewares = [];
 reduxMiddlewares.push(thunk);
 
 // Если в localStorage есть сохраанение, берем их и..
-let presistStore = {};
-if (window.localStorage.getItem('store') !== null) {
-    presistStore = JSON.parse(window.localStorage.getItem('store'));
-}
+// let presistStore = {};
+// if (window.localStorage.getItem('store') !== null) {
+//     presistStore = JSON.parse(window.localStorage.getItem('store'));
+// }
 
 const composeEnhancers = window.__REDUX_DEVTOOLS_EXTESION_COMPOSE || compose;
 
 // данные из presistStore подмешиваются к initState редьюсеров
-let store = createStore(reducer, presistStore, composeEnhancers(applyMiddleware(...reduxMiddlewares)));
+let store = createStore(reducer, {}, composeEnhancers(applyMiddleware(...reduxMiddlewares)));
+// let store = createStore(reducer, presistStore, composeEnhancers(applyMiddleware(...reduxMiddlewares)));
 
 // Сохраняем store в localStorage при изменениях в store
 store.subscribe(() => {
