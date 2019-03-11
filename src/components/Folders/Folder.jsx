@@ -1,17 +1,17 @@
-import React from 'react';
+import React from "react";
 
-const Folder = ({folderName, onHandleSelected, selected}) => {
+const Folder = ({ folderName, onHandleSelected, selected }) => {
+  let className = "Folder";
 
-    let className = 'Folder';
+  if (selected === true) {
+    className += " selected";
+  }
 
-    if (selected === true) {
-        className += ' selected';
-    }
-
-    return (
-        <div onClick={onHandleSelected} className={className}>{folderName}</div>
-    )
-
-}
+  return (
+    <div onClick={onHandleSelected} className={className}>
+      {folderName}
+    </div>
+  );
+};
 
 export default Folder;

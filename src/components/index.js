@@ -1,7 +1,4 @@
-import LeftMenu from './LeftMenu';
-import TaskArea from './TaskArea';
+import LeftMenu from "./LeftMenu";
+import TaskArea from "./TaskArea";
 
-export {
-    LeftMenu,
-    TaskArea
-}
+export { LeftMenu, TaskArea };

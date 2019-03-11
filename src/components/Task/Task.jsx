@@ -1,9 +1,7 @@
-import React from 'react';
+import React from "react";
 
-const Task = ({taskName}) => {
-    return (
-        <div>{taskName}</div>
-    )
-}
+const Task = ({ taskName }) => {
+  return <div>{taskName}</div>;
+};
 
 export default Task;

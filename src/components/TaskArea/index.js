@@ -1,3 +1,3 @@
-import asTaskArea from './asTaskArea';
+import asTaskArea from "./asTaskArea";
 
 export default asTaskArea;

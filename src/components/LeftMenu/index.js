@@ -1,3 +1,3 @@
-import asLeftMenu from './asLeftMenu';
+import asLeftMenu from "./asLeftMenu";
 
 export default asLeftMenu;
