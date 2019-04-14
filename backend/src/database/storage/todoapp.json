@@ -6,19 +6,11 @@
     ],
     "tasks": [
         {
-            "title": "Научиться готовить блинчики",
-            "folder": "ТуДу"
-        },
-        {
             "title": "new321",
             "folder": "new312"
         },
         {
             "title": "Заправить принтер",
-            "folder": "Работа"
-        },
-        {
-            "title": "Взломать почту",
             "folder": "Работа"
         },
         {
@@ -48,6 +40,10 @@
         {
             "title": "newTaask",
             "folder": "newfolder"
+        },
+        {
+            "title": "newTaask",
+            "folder": "ТуДу"
         }
     ]
 }

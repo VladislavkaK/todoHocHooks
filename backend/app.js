@@ -45,7 +45,6 @@ app.post('/todoapp/task/update', (req, res) => {
     const { id, title, folder } = req.body;
 
     try {
-        // TODO: Реализовать метод в TodoDatabase
         db.updateTask(id, title, folder);
     } catch (error) {
         return res.json({ success: false, error: { message: 'Не удалось изменить задачу!' } });
@@ -62,9 +61,13 @@ app.post('/todoapp/task/delete', (req, res) => {
 
     const { id } = req.body;
 
-    // TODO: Реализовать метод в TodoDatabase
-    // db.deleteTask(id);
+    try {
+        db.deleteTask(id);
+    } catch (error) {
+        res.json({success: false, error: { message: 'Не удалось удалить задачу!' }});
+    }
 
+    return res.json({success: true})
 });
 
 /**
